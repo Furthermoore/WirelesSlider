@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MPCHandler.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+// global multipeer object
+@property (strong, nonatomic) MPCHandler *mpcHandler;
 
 @end

@@ -19,6 +19,9 @@
 		A9866D0C18F3B5C10018A14B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9866CF418F3B5C10018A14B /* UIKit.framework */; };
 		A9866D1418F3B5C10018A14B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9866D1218F3B5C10018A14B /* InfoPlist.strings */; };
 		A9866D1618F3B5C10018A14B /* WirelesSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9866D1518F3B5C10018A14B /* WirelesSliderTests.m */; };
+		A9866D2118F3B5FC0018A14B /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A9866D2018F3B5FC0018A14B /* MainVC.m */; };
+		A9866D2418F3B61D0018A14B /* MPCHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A9866D2318F3B61D0018A14B /* MPCHandler.m */; };
+		A9866D2718F3B93A0018A14B /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9866D2618F3B93A0018A14B /* MultipeerConnectivity.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,11 @@
 		A9866D1118F3B5C10018A14B /* WirelesSliderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WirelesSliderTests-Info.plist"; sourceTree = "<group>"; };
 		A9866D1318F3B5C10018A14B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A9866D1518F3B5C10018A14B /* WirelesSliderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WirelesSliderTests.m; sourceTree = "<group>"; };
+		A9866D1F18F3B5FC0018A14B /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
+		A9866D2018F3B5FC0018A14B /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
+		A9866D2218F3B61D0018A14B /* MPCHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCHandler.h; sourceTree = "<group>"; };
+		A9866D2318F3B61D0018A14B /* MPCHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCHandler.m; sourceTree = "<group>"; };
+		A9866D2618F3B93A0018A14B /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9866D2718F3B93A0018A14B /* MultipeerConnectivity.framework in Frameworks */,
 				A9866CF318F3B5C10018A14B /* CoreGraphics.framework in Frameworks */,
 				A9866CF518F3B5C10018A14B /* UIKit.framework in Frameworks */,
 				A9866CF118F3B5C10018A14B /* Foundation.framework in Frameworks */,
@@ -77,6 +86,7 @@
 		A9866CE418F3B5C00018A14B = {
 			isa = PBXGroup;
 			children = (
+				A9866D2518F3B6280018A14B /* classes */,
 				A9866CF618F3B5C10018A14B /* WirelesSlider */,
 				A9866D0F18F3B5C10018A14B /* WirelesSliderTests */,
 				A9866CEF18F3B5C10018A14B /* Frameworks */,
@@ -96,6 +106,7 @@
 		A9866CEF18F3B5C10018A14B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9866D2618F3B93A0018A14B /* MultipeerConnectivity.framework */,
 				A9866CF018F3B5C10018A14B /* Foundation.framework */,
 				A9866CF218F3B5C10018A14B /* CoreGraphics.framework */,
 				A9866CF418F3B5C10018A14B /* UIKit.framework */,
@@ -109,7 +120,8 @@
 			children = (
 				A9866CFF18F3B5C10018A14B /* AppDelegate.h */,
 				A9866D0018F3B5C10018A14B /* AppDelegate.m */,
-				A9866D0218F3B5C10018A14B /* Images.xcassets */,
+				A9866D1F18F3B5FC0018A14B /* MainVC.h */,
+				A9866D2018F3B5FC0018A14B /* MainVC.m */,
 				A9866CF718F3B5C10018A14B /* Supporting Files */,
 			);
 			path = WirelesSlider;
@@ -118,6 +130,7 @@
 		A9866CF718F3B5C10018A14B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A9866D0218F3B5C10018A14B /* Images.xcassets */,
 				A9866CF818F3B5C10018A14B /* WirelesSlider-Info.plist */,
 				A9866CF918F3B5C10018A14B /* InfoPlist.strings */,
 				A9866CFC18F3B5C10018A14B /* main.m */,
@@ -142,6 +155,15 @@
 				A9866D1218F3B5C10018A14B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9866D2518F3B6280018A14B /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				A9866D2218F3B61D0018A14B /* MPCHandler.h */,
+				A9866D2318F3B61D0018A14B /* MPCHandler.m */,
+			);
+			name = classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +261,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9866D2118F3B5FC0018A14B /* MainVC.m in Sources */,
+				A9866D2418F3B61D0018A14B /* MPCHandler.m in Sources */,
 				A9866D0118F3B5C10018A14B /* AppDelegate.m in Sources */,
 				A9866CFD18F3B5C10018A14B /* main.m in Sources */,
 			);

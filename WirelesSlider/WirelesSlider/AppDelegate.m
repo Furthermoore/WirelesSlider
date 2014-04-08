@@ -7,13 +7,24 @@
 //
 
 #import "AppDelegate.h"
+#import "MainVC.h"
 
 @implementation AppDelegate
+
+@synthesize mpcHandler;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    // create global multipeer object
+    self.mpcHandler = [[MPCHandler alloc] init];
+    
+    // create main view controller
+    MainVC *mvc = [[MainVC alloc] init];
+    
+    self.window.rootViewController = mvc;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
